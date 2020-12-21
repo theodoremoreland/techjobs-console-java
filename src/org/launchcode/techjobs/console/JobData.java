@@ -22,6 +22,27 @@ public class JobData {
 
     private static ArrayList<HashMap<String, String>> allJobs;
 
+    public static ArrayList<HashMap<String, String>> findByValue(String searchTerm) {
+        loadData();
+
+        searchTerm = searchTerm.toLowerCase();
+
+        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+
+        for (HashMap<String, String> job: allJobs){
+
+            for (Map.Entry<String,String> field : job.entrySet()) {
+
+                String value = field.getValue().toLowerCase();
+
+                if (value.contains(searchTerm) && !jobs.contains(job)) {
+                    jobs.add(job);
+                }
+            }
+        }
+        return jobs;
+    }
+
     /**
      * Fetch list of all values from loaded data,
      * without duplicates, for a given column.
@@ -71,47 +92,21 @@ public class JobData {
         // load data, if not already loaded
         loadData();
 
+        value = value.toLowerCase();
+
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
         for (HashMap<String, String> row : allJobs) {
 
-            String aValue = row.get(column);
+            String aValue = row.get(column).toLowerCase();
 
-            if (aValue.toLowerCase().contains(value.toLowerCase())) {
+            if (aValue.contains(value)) {
                 jobs.add(row);
             }
         }
 
         return jobs;
     }
-
-
-    public static ArrayList<HashMap<String, String>> findByValue(String column, String value) {
-
-        // load data, if not already loaded
-        loadData();
-
-        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
-
-        for (int i = 0; i < allJobs.size(); i++) {
-
-            for (Map.Entry<String, String> row : allJobs.get(i).entrySet()) {
-                //HashMap<String, String> element = new HashMap<>();
-
-                String aValue = row.getValue();
-                String aKey = row.getKey();
-
-                //element.put(aKey, aValue);
-
-                if (aValue.toLowerCase().contains(value.toLowerCase())) {
-                    jobs.add(allJobs.get(i));
-                }
-            }
-        }
-            return jobs;
-        }
-
-
 
     /**
      * Read in data from a CSV file and store it in a list
