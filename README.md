@@ -12,22 +12,32 @@ unique values present for that field currently in the database/csv.
 
 *This was a homework assignment for LaunchCode's Lc101 (2018-2021)*
 
-<img src="presentation/1.PNG" width="700">
+## Start menu (where the user selects how to query job data)
+User selects View jobs by option #1 (List),  List option #4 (Skills)
 
-<img src="presentation/2.PNG" width="700">
+<img src="presentation/2.PNG" width="600">
 
-<img src="presentation/3.PNG" width="700">
+## App displays list of skills currently in job data (sorted alpabetically)
+<img src="presentation/3.PNG" width="600">
 
-<img src="presentation/4.PNG" width="700">
+## After user selects View jobs by option #1 (List),  List option #2 (Employer)
+Displays all employers currently in job data (sorted alphabetically)
+
+<img src="presentation/4.PNG" width="600">
+
+## After user selects View jobs by option #1 (List),  List option #0 (All)
+Displays list of every job in job data in custom format
 
 <img src="presentation/5.PNG" width="700">
 
+## User selects View jobs by option #0 (Search), Search by option #0 (all), then types in "software" as the search term
 <img src="presentation/6.PNG" width="700">
 
+## Displays all jobs featuring the search term "software" (case insensitive)
 <img src="presentation/7.PNG" width="700">
 
+## User selects View jobs by option #0 (Search), Search by option #3 (location), then types in "city" as the search term
 <img src="presentation/8.PNG" width="700">
 
+## Displays all jobs with the search term "city" in the location field
 <img src="presentation/9.PNG" width="700">
-
-<img src="presentation/10.PNG" width="700">
