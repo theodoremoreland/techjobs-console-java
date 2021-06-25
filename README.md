@@ -23,7 +23,7 @@ User selects View jobs by option #1 (List),  List option #4 (Skills)
 
 <img src="presentation/2.PNG" width="600">
 
-## App displays list of skills currently in job data (sorted alpabetically)
+## App displays list of skills currently in job data (sorted alphabetically)
 <img src="presentation/3.PNG" width="600">
 
 ## After user selects View jobs by option #1 (List),  List option #2 (Employer)
